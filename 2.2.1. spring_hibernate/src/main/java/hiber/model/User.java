@@ -72,11 +72,10 @@ mappedBy = "user" указывает, что эта связь является 
 
    @Override
    public String toString() {
-      return "User{" +
-              "id=" + id +
-              ", firstName='" + firstName + '\'' +
-              ", lastName='" + lastName + '\'' +
-              ", email='" + email + '\'' +
-              '}';
+      return "User id= " + id + '\n' +
+              " Имя = " + firstName + '\n' +
+              " Фамилия = " + lastName + '\n' +
+              " email= '" + email + '\'' + '\n';
    }
+
 }
