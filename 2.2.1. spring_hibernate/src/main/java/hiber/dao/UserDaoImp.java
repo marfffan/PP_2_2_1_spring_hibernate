@@ -29,7 +29,9 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public User getUserByCar(String model, int series) {
-        String hql = "from User user where user.car.model = :model and user.car.series = :series";
+        String hql = "from User user " +
+                "join fetch user.car c " +
+                "where c.model = :model and c.series = :series";
         TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setParameter("model", model).setParameter("series", series);
         return query.setMaxResults(1).getSingleResult();
