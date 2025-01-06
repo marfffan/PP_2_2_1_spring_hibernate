@@ -16,7 +16,7 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(optional = false)
+    @OneToOne(optional = false)// Убрал FetchType.Eager
     @JoinColumn(name = "user_id")
     private User user;
 
