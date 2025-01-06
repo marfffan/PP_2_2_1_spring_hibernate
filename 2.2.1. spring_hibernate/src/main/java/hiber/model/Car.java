@@ -16,7 +16,7 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(optional = false, fetch = FetchType.EAGER)
+    @OneToOne(optional = false)
     @JoinColumn(name = "user_id")
     private User user;
 
